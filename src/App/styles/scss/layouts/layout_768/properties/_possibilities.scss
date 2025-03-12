@@ -1,0 +1,46 @@
+.possibilities {
+    padding-top: 80px;
+    &__title{
+        @include section-title
+    }
+    &__description {
+        @include section-text
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        row-gap: 20px;
+    }
+}
+.price {
+    display: grid;
+        grid-template-areas: 
+        "price details"
+        "value details";
+        column-gap: 30px;
+        margin-top: auto;
+        
+        &__text {
+                @include section-text;
+                margin: 0;
+                grid-area: price;
+        }
+
+        &__value {
+            margin: 0;
+            grid-area: value;
+
+        }
+        &__details {
+            display: flex;
+            @include flex-center;
+            text-align: center;
+            color: $white;
+            font-size: 14px;
+            padding: 5px 35px;
+            background: $pink;
+            @include border (8px);
+            grid-area: details;
+        }
+}

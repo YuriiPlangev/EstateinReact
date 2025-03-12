@@ -1,0 +1,53 @@
+.world{
+    padding-top: 80px;
+    &__title{
+        @include section-title
+    }
+    &__description{
+        @include section-text
+    }
+    &__wrap {
+        @include border(12px);
+        padding: 24px;
+        display: grid;
+        grid-template-areas: 
+        "img1 img1 img2 img2"
+        "img3 img3 img4 img5"
+        "text text text text"
+        "img6 img6 img6 img6";
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    &__card{
+        &-first{
+            grid-area: img1;
+        }
+        &-second{
+            grid-area: img2;
+        }
+        &-third{
+            grid-area: img3;
+        }
+        &-fourth{
+            grid-area: img4;
+        }
+        &-fiveth{
+            grid-area: img5;
+        }
+        &-sixth{
+            grid-area: img6;
+        }
+    }
+    &__text{
+        grid-area: text;
+        align-self: center;
+        justify-self: center;
+    }
+    
+}

@@ -1,0 +1,26 @@
+.intro__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    @include border (12px);
+    margin-top: 40px;
+    padding: 10px;
+    box-shadow: 1px 0 5px 9px #191919;
+}
+.intro__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include flex-center;
+    background: $btnBg;
+    @include border(8px);
+    padding: 10px;
+    font-size: 14px;
+}
+.card__icon {
+        position: absolute;
+        top: 10%;
+        right: 6%;
+    }

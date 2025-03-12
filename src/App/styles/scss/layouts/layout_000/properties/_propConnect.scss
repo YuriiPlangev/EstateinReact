@@ -1,0 +1,18 @@
+.properties{
+    &__intro{
+        &-intro{
+        padding-block: 50px;
+    }
+    }
+    
+    &__connect{
+    padding-top: 80px;
+}
+    &__title{
+        @include section-title
+    }
+    &__description{
+        @include section-text;
+        padding-bottom: 40px;
+    }
+}

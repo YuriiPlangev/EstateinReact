@@ -1,0 +1,33 @@
+
+html {
+  font-size: cssvar(font-size);
+  color: $white;
+}
+a {
+  font-family: "Urbanist", sans-serif;
+  text-decoration: none;
+}
+body {
+  font-family: cssvar(font-family);
+  font-size: 1rem;
+  background: $bg;
+  
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  padding: 0 2vw;
+}
+.hidden {
+  display: none;
+}
+// .slide {
+//   display: flex;
+//   &__item {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: space-between;
+//     flex: 1;
+//   }
+// }

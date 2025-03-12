@@ -1,0 +1,11 @@
+.team {
+    &__cards{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+    }
+    &__card{
+        &-button{
+            cursor: pointer;
+        }
+    }
+}

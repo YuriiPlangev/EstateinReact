@@ -1,0 +1,104 @@
+
+.connect{
+    padding-top: 80px;
+    &__title {
+        @include section-title
+    }
+    &__description {
+        @include section-text
+    }
+&__form {
+    @include border(12px); 
+    padding-inline: 20px;
+}
+
+&__fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    gap: 10px;
+    padding: 20px 0;
+}
+&__input {
+    resize: none;
+    @include border(6px);
+    padding: 16px 20px;
+    background: $btnBg;
+    color: $grey;
+    &::placeholder{
+        color: $grey;
+    }
+    &:focus {
+        border: 1px solid white;
+        transition: 0.5s;
+    }
+
+}
+&__checkbox {
+    position: absolute;
+    z-index: -10;
+    opacity: 0;
+    &:checked + .checkbox__label::after {
+        opacity: 1;
+      }
+}
+&__button {
+    display: flex;
+    @include flex-center;
+    text-align: center;
+    color: $white;
+    font-size: 14px;
+    padding:14px 30px;
+    background: $pink;
+    @include border (6px);
+    margin-inline: 20px;
+    margin-block: 20px;
+}
+
+
+}
+.checkbox {
+    &__label {
+        color: $grey;
+        padding-left: 1.3rem;
+        cursor: pointer;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #262626;
+            background-color: #191919;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            opacity: 0;
+          }
+}
+    &__fieldset {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        border: none;
+    }
+    &__link {
+        color: $grey;
+        text-decoration: underline;
+    }
+}
+.error {
+    color: $pink;
+    font-size: 12px;
+    display: none;
+    padding-top: 5px;
+}

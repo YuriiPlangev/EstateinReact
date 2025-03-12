@@ -1,0 +1,37 @@
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 50px 16px;
+    &__form {
+        position: relative;
+        align-self: center;
+    }
+    &__logo {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+    }
+    &__input {
+        display: flex;
+        width: 100%;
+        padding-block: 14px;
+        padding-left: 40px;
+        padding-right: 40px;
+        @include border (8px);
+        color: $white;
+        background: url(svg/email.svg) no-repeat;
+        background-position: 12px center;
+        &:focus {
+            border: 1px solid white;
+            transition: 0.5s;
+        }
+    }
+    &__btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+}

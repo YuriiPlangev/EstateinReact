@@ -1,0 +1,14 @@
+.world{
+    &__wrap {
+
+        grid-template-areas: 
+        "img1 img1 img2 img2"
+        "img3 img3 img4 img5"
+        "text text img6 img6"
+        "text text img6 img6";
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 60px;
+    }
+
+}

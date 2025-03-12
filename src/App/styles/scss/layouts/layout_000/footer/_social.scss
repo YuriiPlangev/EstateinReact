@@ -1,0 +1,18 @@
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    
+    &__link {
+        display: flex;
+        @include flex-center;
+        background: $bg;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        &:active {
+            scale: 1.3;
+        }
+    }
+}
+

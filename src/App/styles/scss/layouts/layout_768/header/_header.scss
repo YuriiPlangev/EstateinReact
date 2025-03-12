@@ -1,0 +1,41 @@
+
+.nav {
+    display: block;
+     &__list {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 25px;
+     }
+
+.list {
+    &__link {
+        color: $white;
+    }
+}
+}
+.button {
+    &__link{ 
+    display: block;
+    
+    
+
+    &--item{
+        color: $white;
+        padding: 15px 20px;
+        @include border (8px);
+        background: $bg;
+        font-size: 18px;
+    }
+}
+&__burger {
+    display: none;
+}
+}
+.current-page{
+
+    @include border(8px);
+    background: $bg;
+    padding: 15px 20px;
+}

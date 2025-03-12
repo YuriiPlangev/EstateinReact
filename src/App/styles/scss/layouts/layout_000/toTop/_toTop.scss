@@ -1,0 +1,18 @@
+.toTop {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    line-height: 1.3;
+    border: 3px solid #008cba;
+    background-color: #00aae3;
+    transform: rotate(-90deg);
+    cursor: pointer;
+    opacity: 0.3;
+    transition: all 0.3s;
+}

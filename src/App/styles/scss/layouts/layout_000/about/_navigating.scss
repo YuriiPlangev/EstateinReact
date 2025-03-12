@@ -1,0 +1,31 @@
+.navigating {
+    padding-top: 80px;
+    &__title{
+        @include section-title
+    }
+    &__description{
+        @include section-text
+    }
+    &__cards{
+        height: 850px;
+        overflow-y: scroll;
+    }
+    &__card{
+        display: flex;
+        flex-direction: column;
+        padding-top: 40px;
+        &-step{
+            border-left: 1px solid #703BF7;
+            padding: 14px;
+            margin: 0;
+        }
+        &-content{
+            flex-grow: 1;
+            border: 1px solid transparent;
+            background-image: linear-gradient(131deg, #703bf7 -23%, #703bf7 -87%, #141414 15%);
+            border-image: linear-gradient(131deg, #703bf7 4%, #703bf7 -87%, #262626 33%) 1;
+            border-radius: 0px 10px 10px 10px;
+            padding: 24px;
+        }
+    }
+}

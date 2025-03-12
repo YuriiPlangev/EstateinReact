@@ -1,0 +1,136 @@
+@function image($file) {
+  @return url($imagesPath + $file);
+}
+
+@function font($file) {
+  @return url($fontsPath + $file);
+}
+
+@function userfile($file) {
+  @return url($usersFilesPath + $file);
+}
+
+@function asset($type, $file) {
+  @if $type == image {
+    @return url($imagesPath + $file);
+  } @else if $type == font {
+    @return url($fontsPath + $file);
+  } @else if $type == userfile {
+    @return url($usersFilesPath + $file);
+  }
+}
+
+@function em($target, $current: $baseFontSize) {
+  @return ($target / $current) * 1em;
+}
+
+@function rem($target) {
+  @return ($target / $baseFontSize) * 1rem;
+}
+
+@mixin e($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin m($modifier) {
+  &_#{$modifier} {
+    @content;
+  }
+}
+
+@mixin mq($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin noselect() {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+@mixin button {
+  background: $btnBg;
+  @include border;
+}
+@mixin border ($radius) {
+  border: 1px solid $borderColor;
+  border-radius: $radius;
+}
+@mixin section-text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: $grey;
+  @media (min-width: 768px) {
+    font-size: 16px; 
+    line-height: 24px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
+@mixin section-title {
+  font-weight: 600;
+  font-size: 28px;
+  color: $white;
+  margin: 0;
+  @media (min-width: 768px) {
+    font-size: 38px; 
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 48px;
+  }
+}
+@mixin flex-center { 
+  align-items: center;
+  justify-content: center;
+}
+@mixin viewAll {
+  font-size: 14px;
+  color: $white;
+  padding: 14px 20px;
+  background: $btnBg;
+  @include border(8px);
+  text-align: center;
+  font-weight: 500;
+
+  &:hover {
+    border: 1px solid transparent;
+  }
+
+  @media (min-width: 1024px) {
+    &:hover {
+      border: 1px solid $white;
+      transition: 0.5s;
+    }
+  }
+}
+
+@mixin font($f, $s, $w: "") {
+  font: #{$w} $s $f;
+}
+
+@mixin cssvars($css_variables, $prefix: beetroot) {
+  :root {
+    @each $name, $value in $css_variables {
+      --#{$prefix}-#{$name}: #{$value};
+    }
+  }
+}
+
+@function cssvar($name, $prefix: beetroot) {
+  @return var(--#{$prefix}-#{$name});
+}
+
+@mixin cssvar($name, $value: "", $prefix: beetroot) {
+  --#{$prefix}-#{$name}: #{$value};
+}
+

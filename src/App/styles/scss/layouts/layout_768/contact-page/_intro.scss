@@ -1,0 +1,25 @@
+.contact-intro {
+    &__text {
+        padding-block: 50px;
+        background: linear-gradient(95.93deg, #262626 -26.82%, rgba(38, 38, 38, 0) 40.46%);
+        
+    }
+    &__title {
+        @include section-title;
+        padding-inline: 2vw;
+        text-align: center
+    }
+    &__description {
+        @include section-text;
+        padding-inline: 2vw;
+    }
+}
+
+.card{
+    &__link {
+        font-size: 16px;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    }

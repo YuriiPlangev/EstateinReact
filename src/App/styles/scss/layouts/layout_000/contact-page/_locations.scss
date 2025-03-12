@@ -1,0 +1,64 @@
+.locations {
+    padding-top: 80px;
+    &__title {
+        @include section-title
+    }
+    &__description {
+        @include section-text
+    }
+    &__cards{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include border(8px);
+        padding: 24px;
+        &-title {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        &-address {
+            margin: 0;
+            font-size: 20px;
+            font-weight: 600;
+        }
+        &-description {
+            @include section-text
+        }
+        &-notes {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+        }
+        &-note {
+            display: flex;
+            @include flex-center;
+            gap: 5px;
+            font-size: 14px;
+            background: $btnBg;
+            @include border(28px);
+            padding: 10px 15px;
+            
+        }
+        &-link {
+            color: $white;
+        }
+        &-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #ffffff;
+            font-size: 14px;
+            padding-block: 14px;
+            background: #703BF7;
+            border: 1px solid #262626;
+            border-radius: 6px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.locations__card{
+    &-button 
+    {
+        position: relative;
+        overflow: hidden;
+            &::before{
+        content: "";
+        background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+        height: 60px;
+        width: 50px;
+        position: absolute;
+        top: 0px;
+        left: -80px;
+        transform: skewX(-45deg);
+        }
+        &:hover::before {
+            left: 110%;
+            transition: 1s ease-in-out;
+        }
+        }
+    &-note {
+            font-size: 18px;
+            }
+    &-link{
+            &:hover{
+                text-decoration: underline;
+            }
+            }
+}

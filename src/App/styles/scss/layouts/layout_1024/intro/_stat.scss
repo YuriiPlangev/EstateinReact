@@ -1,0 +1,35 @@
+.statistics {
+    display: grid;
+    grid-template-areas: 
+    "customers clients experience";
+    gap: 12px;
+    padding-top: 40px;
+}
+.stat {
+    display: flex;
+    flex-direction: column;
+    @include flex-center;
+    gap: 15px;
+    background: $btnBg;
+    @include border (8px);
+    padding: 16px;
+    &__number {
+        font-size: 30px;
+        font-weight: 700;
+        margin: 0;
+    }
+    &__text {
+        @include section-text;
+        margin: 0;
+        text-align: center;
+    }
+}
+.first {
+    grid-area: customers ;
+}
+.second {
+    grid-area: clients ;
+}
+.third {
+    grid-area: experience ;
+}

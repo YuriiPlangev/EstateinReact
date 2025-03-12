@@ -1,0 +1,94 @@
+.properties{
+    &-intro{
+        &__text{
+            padding-block: 50px;
+            padding-inline: 2vw;
+            background: linear-gradient(95.93deg, #262626 -26.82%, rgba(38, 38, 38, 0) 40.46%);
+        }
+    &__title{
+        @include section-title
+    }
+    &__description{
+        @include section-text
+    }
+    }
+    &__filter {
+        padding-inline: 2vw;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        &-form{
+            align-self: center;
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        &-search {
+            @include border(12px);
+            padding: 22px 18px;
+            width: 100%;
+            box-shadow: 0px 0px 0px 4px #191919;
+            color: $white;
+            &:focus{
+                border: 1px solid $white;
+                transition: 0.5s;
+            }
+
+        }
+        &-selects{
+            background: $btnBg;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 8px;
+            
+        }
+        &-select {
+            width: 100%;
+            display: block;
+            @include border(8px);
+            padding: 15px 33px;
+            background: $bg;
+            color: $grey;
+            &:focus {
+                border: 1px solid white;
+                transition: 0.5s;
+            }
+            &::before{
+                content: "";
+                display: block;
+                background-color: $grey;
+                width: 1px;
+                height: 100%;
+                position: absolute;
+            }
+        }
+        &-button{
+            position: absolute;
+            right: 25px;
+            bottom: 31%;
+        }
+    }
+    &__fieldset{
+        position: relative;
+        padding: 0;
+        border: none;
+        display: flex;
+    }
+    &__svg{
+        position: absolute;
+        top: 13px;
+        left: 10px;
+    }
+    &__buttons{
+        margin-top: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__pagination{
+        display: flex;
+        gap: 20px;
+    }
+}

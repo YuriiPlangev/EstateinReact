@@ -1,0 +1,47 @@
+.team {
+    padding-top: 80px;
+    &__title {
+        @include section-title
+    }
+    &__description {
+        @include section-text
+    }
+    &__cards{
+        display: grid;
+        gap: 20px;
+    }
+    &__card {
+        @include border(12px);
+        padding: 20px;
+        text-align: center;
+        &-img{
+            width: 100%;
+        }
+        &-position{
+            @include section-text
+        }
+        &-name {
+            font-weight: 600;
+        }
+        &-form{
+            position: relative;
+            width: 100%;
+        }
+        &-input{
+            @include border(100px);
+            background: $btnBg;
+            padding: 18px 24px;
+            color: $white;
+            width: 100%;
+            &:focus{
+                border: 1px solid $white;
+                transition: 0.7s;
+            }
+        }
+        &-button{
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+    }
+}

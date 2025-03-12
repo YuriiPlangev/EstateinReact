@@ -1,0 +1,30 @@
+.feedback {
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+
+    &__card {
+
+        &--heading {
+            font-size: 20px;
+        }
+        &--text {
+            font-size: 16px;
+        }
+
+    }
+}
+.person {
+
+    &__info {
+
+    
+    &_name {
+        font-size: 16px;
+    }
+    &_city {
+        font-size: 16px;
+    }
+}
+}
+

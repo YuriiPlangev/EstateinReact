@@ -1,0 +1,27 @@
+.achievements {
+    padding-top: 80px;
+    &__title{
+        @include section-title
+    }
+    &__description{
+        @include section-text
+    }
+    &__cards{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__card{
+        padding: 30px;
+        box-shadow: 0px 0px 0px 4px #191919;
+        @include border(10px);
+        &-title{
+            font-size: 20px;
+        }
+        &-description {
+            @include section-text;
+        }
+
+    }
+}

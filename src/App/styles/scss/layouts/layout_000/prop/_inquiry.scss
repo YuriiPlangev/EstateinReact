@@ -1,0 +1,12 @@
+.property-inquiry{
+    padding-top: 80px;
+    &-title{
+        @include section-title;
+    }
+    &-description{
+        @include section-text;
+    }
+    &__input{
+        color: $white;
+    }
+}

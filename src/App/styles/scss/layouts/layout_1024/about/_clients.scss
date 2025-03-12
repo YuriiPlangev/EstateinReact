@@ -1,0 +1,31 @@
+.clients{
+&__wrap{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+&__card{
+    &-title{
+        font-size: 39px;
+    }
+
+    &-label {
+        font-size: 18px;
+    }
+    &-value{
+        font-size: 20px;
+
+    }
+    &-text{
+        font-size: 18px;
+    }
+    &-link{
+        font-size: 18px;
+        &:hover{
+            border: 1px solid $pink;
+            transition: 0.7s;
+        }
+    }
+
+}
+}

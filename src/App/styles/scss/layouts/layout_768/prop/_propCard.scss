@@ -1,0 +1,122 @@
+.property-card{
+    padding-top: 60px;
+    &-title{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    &-text{
+        @include section-text
+    }
+    &__info{
+        margin-bottom: 30px;
+       display: grid;
+       column-gap: 10px;
+       grid-template-columns: auto auto 1fr;
+       grid-template-rows: 1fr;
+    &-location {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        @include border(6px);
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        padding: 8px;
+        }
+        &-price{
+            grid-row: 1/3;
+            justify-self: flex-end;
+            grid-column: 3/4;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+    &-place{
+        margin: 0;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &-value{
+    align-self: flex-start;
+    }   
+    &-name{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    &-text{
+        margin: 0;
+        @include section-text;
+    }
+    &-price{
+        grid-row: 1/3;
+        grid-column: 3/4;
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+    }
+}
+    &__details{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            background-color: $btnBg;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            top: 0;
+        }
+        &::after{
+            content: "";
+            display: block;
+            background-color: $btnBg;
+            width: 100%;
+            height: 2px;
+            position: absolute;
+            bottom: 45%;
+        }
+    }
+    &__detail{
+        &-title{
+            @include section-text;
+        }
+        &-value{
+            font-size: 18px;
+            font-weight: 600;
+        }
+        &-wrap{
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+    }
+    &__descriptions{
+        display: flex;
+        flex-direction: row;
+        gap: 3px;
+    }
+    &__description{
+        margin-bottom: 20px;
+        @include border(10px);
+        padding: 20px;
+    }
+    &__features{
+        &-list{
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            padding: 0;
+        }
+            &-item{
+            border-left: 1px solid $pink;
+            padding: 10px 12px;
+            @include section-text;
+            background: linear-gradient(90deg, #1A1A1A 0%, rgba(26, 26, 26, 0) 100%);
+            list-style: none;
+            
+            }   
+        }
+    }

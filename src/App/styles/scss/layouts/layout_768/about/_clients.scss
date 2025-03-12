@@ -1,0 +1,26 @@
+.clients{
+    &__wrap{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__card{
+        &-title{
+            font-size: 24px;
+        }
+    
+        &-label {
+            font-size: 16px;
+        }
+        &-value{
+            font-size: 18px;
+    
+        }
+        &-text{
+            font-size: 16px;
+        }
+        &-link{
+            font-size: 15px;
+        }
+    }
+    }

@@ -1,0 +1,78 @@
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+    "content img"
+    "cards cards";
+    padding-top: 0;
+    padding-inline: 0;
+
+    &__content {
+        padding-inline: 55px;
+        grid-area: content;
+    }
+
+    &__img {
+        border-left: solid 1px #262626;
+        order: 1;
+        grid-area: img;
+        &-build {
+            width: 100%;
+            height: 100%;
+        }
+        &-discover {
+            position: absolute;
+            left: -58px;
+            top: 80px;
+        }
+        
+    }
+    &__cards {
+        grid-area: cards;
+    }
+
+    &__button {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        padding-top: 40px;
+        
+    }
+}
+.button__learn {
+    @include border (8px);
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+    font-weight: 500 ;
+    &:hover{
+        border: solid 1px $pink;
+        color: $pink;
+        transition: 0.2s;
+    }
+}
+.button__browse {
+    @include border (8px);
+    text-align: center;
+    width: 100%;
+    padding-block: 14px;
+    background: $pink;
+    position: relative;
+    overflow: hidden;
+    &::before{
+        content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 60px;
+    width: 50px;
+    position: absolute;
+    top: 0px;
+    left: -80px;
+    transform: skewX(-45deg);
+    }
+    &:hover::before {
+        left: 110%;
+        transition: .7s ease-in-out;
+    }
+    
+}

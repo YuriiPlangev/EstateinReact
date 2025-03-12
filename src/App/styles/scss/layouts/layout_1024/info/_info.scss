@@ -1,0 +1,40 @@
+.info {
+    &__box{
+    display: grid;
+    grid-template-areas: 
+    "title button"
+    "text button";
+    column-gap: 150px;
+    }
+    &__title {
+        grid-area: title;
+    }
+    &__text {
+        grid-area: text;
+
+    }
+    &__button {
+       grid-area: button;
+       display: flex;
+       @include flex-center;
+       align-self: center;
+       margin: 0;
+       padding: 14px 20px;
+       position: relative;
+       overflow: hidden;
+       &::before{
+        content: "";
+        background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+        height: 60px;
+        width: 50px;
+        position: absolute;
+        top: 0px;
+        left: -80px;
+        transform: skewX(-45deg);
+        }
+        &:hover::before {
+            left: 110%;
+            transition: .7s ease-in-out;
+        }
+        }
+}

@@ -1,0 +1,13 @@
+
+.email {
+
+    &__form {
+        justify-items: end;
+    }
+    &__logo {
+        display: flex;
+    }
+    &__input {
+        width: auto;
+    }
+}

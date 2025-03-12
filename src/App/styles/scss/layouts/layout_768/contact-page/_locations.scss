@@ -1,0 +1,12 @@
+.locations {
+    &__cards{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+    &__card{
+    &-address {
+        font-size: 26px;
+    }
+}
+}
