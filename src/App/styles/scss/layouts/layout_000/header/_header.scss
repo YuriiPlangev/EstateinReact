@@ -2,8 +2,6 @@
     @include border (0px);
     background: $btnBg;
     padding: 10px 2vw;
-    display: flex;
-    justify-content: space-between;
     
     &__logo {
         display: flex;
@@ -11,7 +9,14 @@
         align-items: center;
         color: $white;
     }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1600px;
+        margin: auto;
+    }
 }
+
 .nav {
     display: none;
 }

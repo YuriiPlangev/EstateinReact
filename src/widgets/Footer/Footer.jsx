@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import LogoIcon from '../../shared/assets/icon/LogoIcon'
 
 function Footer() {
@@ -9,6 +10,7 @@ function Footer() {
       <a
         href="https://www.facebook.com/"
         target="_blank"
+        rel="noopener noreferrer"
         className="social__link"
         aria-label="facebook link"
       >
@@ -25,6 +27,7 @@ function Footer() {
       <a
         href="https://www.linkedin.com/"
         target="_blank"
+        rel="noopener noreferrer"
         className="social__link"
         aria-label="linkedin link"
       >
@@ -41,6 +44,7 @@ function Footer() {
       <a
         href="https://x.com/"
         target="_blank"
+        rel="noopener noreferrer"
         className="social__link"
         aria-label="twitter link"
       >
@@ -57,6 +61,7 @@ function Footer() {
       <a
         href="https://www.youtube.com/"
         target="_blank"
+        rel="noopener noreferrer"
         className="social__link"
         aria-label="youtube link"
       >
@@ -73,9 +78,10 @@ function Footer() {
     </div>
     <div className="copyright">
       <p className="copyright__text">@2023 Estatein. All Rights Reserved.</p>
-      <a href="terms.html" className="copyright__link">
-        Terms &amp; Conditions
-      </a>
+      <Link to={"/terms"} className="copyright__link">
+      Terms &amp; Conditions
+      </Link>
+      
     </div>
   </div>
   <form action="" method="post" className="email__form">

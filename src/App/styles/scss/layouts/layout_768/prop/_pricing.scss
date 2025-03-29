@@ -75,7 +75,7 @@
             @include border(6px);
             padding: 6px 12px;
             grid-area: note;
-            display: inline-flex;
+            justify-self: end;
         }
     }
 }

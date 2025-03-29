@@ -15,8 +15,8 @@ function Featured() {
       <FeaturedSlider />
 
       <div className="buttons--wrapper">
-        <ViewAllBtn link="/properties" />
-        <SliderPagination />
+        <ViewAllBtn />
+        
       </div>
     </section>
   );

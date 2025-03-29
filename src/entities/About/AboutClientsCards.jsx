@@ -9,6 +9,7 @@ function AboutClientsCards () {
           href="https://www.linkedin.com/"
           className="clients__card-link"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Visit Website
         </a>
@@ -40,6 +41,7 @@ function AboutClientsCards () {
           href="https://www.linkedin.com/"
           className="clients__card-link"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Visit Website
         </a>

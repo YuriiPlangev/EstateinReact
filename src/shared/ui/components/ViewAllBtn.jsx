@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
 function ViewAllBtn() {
     return (
-        <a href="properties.html" className="view-all__button">
+        <Link to="/properties" className="featured__button">
             View All Properties
-        </a>
+        </Link>
+        
     );
 }
 export default ViewAllBtn

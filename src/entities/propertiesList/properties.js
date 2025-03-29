@@ -1,4 +1,4 @@
-import logo from "/images/prop/1.png"
+
 export const properties = [
 
 {
@@ -8,7 +8,7 @@ export const properties = [
     bathrooms: "2",
     area: "228",
     price: "3800000" ,
-    place: "Miami",
+    location: "Miami",
     type: "house",
     features: [
         "Prime location near the city center, offering unparalleled convenience to major attractions and business districts.",
@@ -33,9 +33,9 @@ export const properties = [
     bedrooms: "2",
     bathrooms: "3",
     area: "90",
-    price: "620000" ,
-    place: "Miami",
-    type: "apartaments",
+    price: "620000",
+    location: "Miami",
+    type: "apartment",
     features: [
         "Private swimming pool, perfect for relaxing and enjoying a refreshing dip in complete privacy.",
         "Fully equipped gym on-site, catering to all your fitness needs without leaving home.",
@@ -61,10 +61,10 @@ export const properties = [
     bathrooms: "2",
     area: "158",
     price: "400000" ,
-    place: "Los-Angeles",
+    location: "Los-Angeles",
     type: "house",
     features: [
-        "Outdoor swimming pool surrounded by lounge areas, perfect for relaxation and family fun.",
+        "Outdoor swimming pool surrounded by lounge sizes, perfect for relaxation and family fun.",
         "Beautifully landscaped garden, offering a serene space for leisure and outdoor activities.",
         "Located near a school and kindergarten, providing excellent educational opportunities within walking distance.",
         "Pet-friendly community, welcoming furry friends to share in the comfort of your new home",
@@ -87,8 +87,8 @@ export const properties = [
     bathrooms: "1",
     area: "60",
     price: "250000" ,
-    place: "Los-Angeles",
-    type: "apartaments",
+    location: "Los-Angeles",
+    type: "apartment",
     features: [
         "Conveniently located near multiple shopping malls, offering easy access to shopping, entertainment, and services.",
         "Underground parking with two dedicated spaces for each apartment, ensuring comfort and security.",
@@ -97,11 +97,11 @@ export const properties = [
     ],
     images :
     [
-        "images/prop/4.1.webp",
-        "images/prop/4.2.webp",
-        "images/prop/4.3.webp",
-        "images/prop/4.4.webp",
-        "images/prop/4.5.webp",
+        "/images/prop/4.1.webp",
+        "/images/prop/4.2.webp",
+        "/images/prop/4.3.webp",
+        "/images/prop/4.4.webp",
+        "/images/prop/4.5.webp",
     ],
     description: "Stay in the heart of Downtown LA at The Craftsman. The lobby features an original tile masterpiece by local artist Ernest Batchelder.The Orpheum Theatre is around the corner for the best of live entertainment. Watch for celebrities at the Lakers game or taste the Bee’s Knees cocktail at Spring St. Bar. Whatever your adventure, it all starts at The Craftsman.",
     
@@ -113,7 +113,7 @@ export const properties = [
     bathrooms: "3",
     area: "186",
     price: "900000" ,
-    place: "Dubai",
+    location: "Dubai",
     type: "house",
     features: [
         "Enjoy a fully equipped gym, swimming pool, and relaxing sauna and steam room facilities.",
@@ -124,11 +124,11 @@ export const properties = [
     ],
     images :
     [
-        "images/prop/5.1.png",
-        "images/prop/5.2.png",
-        "images/prop/5.3.png",
-        "images/prop/5.4.png",
-        "images/prop/5.5.png",
+        "/images/prop/5.1.png",
+        "/images/prop/5.2.png",
+        "/images/prop/5.3.png",
+        "/images/prop/5.4.png",
+        "/images/prop/5.5.png",
     ],
     description: "Cosy Luxury villa Tilal Alghaf is located in Dubai, just 4.1 miles from Dubai Autodrome and 8.6 miles from Mall of the Emirates. This property offers access to a terrace and free private parking. The vacation home offers an outdoor swimming pool with a fence, as well as a fitness room and full-day security.",
     
@@ -140,8 +140,8 @@ export const properties = [
     bathrooms: "3",
     area: "146",
     price: "595000" ,
-    place: "Dubai",
-    type: "apartaments",
+    location: "Dubai",
+    type: "apartment",
     features: [
         "Relax in the outdoor swimming pool, perfect for unwinding under the open sky.",
         "Stay active and healthy with a fully equipped fitness center.",
@@ -149,11 +149,11 @@ export const properties = [
         "Immerse yourself in the tranquility of a beautifully landscaped garden.",    ],
     images :
     [
-        "images/prop/6.1.webp",
-        "images/prop/6.2.webp",
-        "images/prop/6.3.webp",
-        "images/prop/6.4.webp",
-        "images/prop/6.5.webp",
+        "/images/prop/6.1.webp",
+        "/images/prop/6.2.webp",
+        "/images/prop/6.3.webp",
+        "/images/prop/6.4.webp",
+        "/images/prop/6.5.webp",
     ],
     description: "This development combines elegant design and premium materials to create a refined living experience, featuring modern indoor finishes, luxurious bathrooms, and sophisticated kitchens. With exclusive amenities like a rooftop infinity pool, outdoor cinema, VR golf, and smart home technology, it offers unparalleled comfort and convenience.",
     

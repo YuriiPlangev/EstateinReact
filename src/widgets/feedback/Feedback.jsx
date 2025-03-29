@@ -13,11 +13,6 @@ function Feedback() {
       </p>
 
       <FeedbackSlider />
-
-      <div className="buttons--wrapper">
-        <ViewAllBtn link="/feedback" />
-        <SliderPagination />
-      </div>
     </section>
   );
 }

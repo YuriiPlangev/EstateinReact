@@ -11,8 +11,9 @@ function ContactUs () {
   <ContactConnect />
   <ContactLocations />
   <ContactWorld />
+  </main>
   <Info />
-</main>
+
 </>
 
  )

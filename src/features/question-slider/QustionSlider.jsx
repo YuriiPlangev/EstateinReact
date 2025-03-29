@@ -1,39 +1,40 @@
 import { questions } from "../../entities/question/questions"
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Autoplay } from 'swiper/modules';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'swiper/css';
 function QusetionSlider() {
-    var settings = {
-        infinity : true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        arrows : false,
-        mobileFirst : true,
-        responsive: [
-            {
-            breakpoint : 768,
-            settings : {
-                slidesToShow: 2,
-                
-            }
-            },
-            {
-            breakpoint :1024,
-            settings : {
-                slidesToShow: 3,
-                
-            }
-            },
-        ]
-  };
+    
     return (
         <div className="slider-container">
-        <Slider {...settings}>
+           <Swiper
+                
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
+                modules={[FreeMode, Autoplay]}
+                breakpoints={{
+                    320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    },
+                    768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    },
+                    1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    },
+                }}
+>
+
+          
         {questions.map((question) => (
-             <div className="slider__item">
+          <SwiperSlide>
+             <div key={question.id} className="slider__item">
              <article className="questions__card">
                <h3 className="questions__card_title">
                  {question.question}
@@ -46,8 +47,9 @@ function QusetionSlider() {
                </a>
              </article>
            </div>
+          </SwiperSlide>
         ))}
-        </Slider>
+        </Swiper>
 
   </div>
     )

@@ -11,10 +11,6 @@ function Question() {
     assist you every step of the way.
   </p>
   <QusetionSlider />
-  <div className="buttons--wrapper">
-    <ViewAllBtn link="/questions"/>
-    <SliderPaginagion />
-  </div>
 </section>
 
     )

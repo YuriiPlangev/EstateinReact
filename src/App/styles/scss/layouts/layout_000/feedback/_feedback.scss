@@ -2,6 +2,13 @@
     display: flex;
     flex-direction: column;
     padding-top: 80px;
+
+    &__wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: stretch
+    }
     &__title {
         @include section-title;
 
@@ -18,6 +25,7 @@
         display: flex;
         flex-direction: column;
         margin-inline: 10px;
+        height: 100%;
         &--heading {
             font-size: 18px;
             font-weight: 600;
@@ -25,6 +33,7 @@
         &--text {
             font-size: 14px;
             line-height: 21px;
+            flex-grow: 1;
         }
         &--appraisal {
             width: 222px;
@@ -62,22 +71,36 @@
 }
     &__photo {
         object-fit: cover;
-        display: none;
         width: 50px;
         height: 50px;
         border-radius: 50px;
     }
 }
-.slick-track {
-    display: flex;
-  }
-.slick-initialized .slick-slide
-  {
-      display: flex;
-      height: auto;
-  }
-.slick-track {
-    display: flex;
+.swiper-slide {
     height: auto;
+}
+.slider__item {
+    height: 100%;
+}
+.slick-list {
+    display: flex;
+    align-items: stretch;  /* Растягивает слайды по высоте */
   }
   
+  .slick-track {
+    display: flex;
+    align-items: stretch;  /* Растягивает слайды по высоте */
+  }
+  
+  /* Переопределяем стандартные стили slick */
+  .slick-slide {
+    display: flex !important;
+    height: 100% !important;  /* Фиксированная высота для каждого слайда */
+  }
+  
+  /* Если используешь дополнительный класс для элемента слайда */
+  .slider__item {
+    display: flex;
+    align-items: stretch;
+  }
+

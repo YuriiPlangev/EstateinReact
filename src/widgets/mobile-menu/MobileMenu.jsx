@@ -1,22 +1,23 @@
 import { NavLink } from "react-router-dom"
 
 
-function MobileMenu ( {showMobileMenu}) {
+function MobileMenu ( {showMobileMenu, setShowMobileMenu} ) {
+
+  const hideMobileMenu = () => {
+    setShowMobileMenu(false)
+  }
     return (
-        <div class= {`${showMobileMenu === true ? "visible" : ""} mobile-menu`}>
-        <nav class="mobile-menu__nav">
-          <ul class="mobile-menu__list">
-            <li class="mobile-menu__item">
-            <NavLink to="/" class="mobile-menu__link">Home</NavLink>
+        <div className= {`${showMobileMenu === true ? "visible" : ""} mobile-menu`}>
+        <nav className="mobile-menu__nav">
+          <ul className="mobile-menu__list">
+            <li className="mobile-menu__item">
+            <NavLink to="/" onClick={hideMobileMenu} className="mobile-menu__link">Home</NavLink>
             </li>
-            <li class="mobile-menu__item">
-            <NavLink to="about" class="mobile-menu__link">About Us</NavLink>
+            <li className="mobile-menu__item">
+            <NavLink to="about" onClick={hideMobileMenu} className="mobile-menu__link">About Us</NavLink>
             </li>
-            <li class="mobile-menu__item">
-            <NavLink to="/properties" class="mobile-menu__link">Properties</NavLink>
-            </li>
-            <li class="mobile-menu__item">
-            <NavLink to="/" class="mobile-menu__link">Services</NavLink>
+            <li className="mobile-menu__item">
+            <NavLink to="/properties" onClick={hideMobileMenu} className="mobile-menu__link">Properties</NavLink>
             </li>
           </ul>
         </nav>

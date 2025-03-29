@@ -5,12 +5,14 @@ import ContactButton from './ui/ContactButton'
 import HeaderNav from './ui/HeaderNav'
 function Header () {
     return (
-           <header className="header ">
-      <LogoIcon />
-      <HeaderNav />
-      <ContactButton />
-      <BurgerButton />
-    </header>
+      <header className="header">
+        <div className='header__wrap'>
+          <LogoIcon />
+          <HeaderNav />
+          <ContactButton />
+          <BurgerButton />
+        </div>
+      </header>
 
     )
 }

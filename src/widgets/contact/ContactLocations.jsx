@@ -73,6 +73,7 @@ function ContactLocations () {
               href="https://maps.app.goo.gl/KkJWHbHQGeniVHKGA"
               className="locations__card-link"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Dubai
             </a>
@@ -82,6 +83,7 @@ function ContactLocations () {
           href="https://maps.app.goo.gl/KkJWHbHQGeniVHKGA"
           className="locations__card-button"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Get Direction
         </a>
@@ -153,6 +155,7 @@ function ContactLocations () {
               href="https://maps.app.goo.gl/KkJWHbHQGeniVHKGA"
               className="locations__card-link"
               target="_blank"
+              rel="noopener noreferrer"
             >
               Dubai
             </a>
@@ -162,6 +165,7 @@ function ContactLocations () {
           href="https://maps.app.goo.gl/KkJWHbHQGeniVHKGA"
           className="locations__card-button"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Get Direction
         </a>

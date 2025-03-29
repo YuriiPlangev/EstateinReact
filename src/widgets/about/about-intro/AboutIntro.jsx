@@ -14,7 +14,7 @@ function AboutIntro() {
     <Statistics />
   </div>
   <div className="intro__img">
-    <img src="images/build2.webp" alt="" className="intro__img-build" />
+    <img src="images/build2.webp" alt="Modern building construction" className="intro__img-build" />
   </div>
 </section>
     )

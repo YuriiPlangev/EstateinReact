@@ -17,7 +17,8 @@
         margin-inline: 10px;
         display: flex;
         flex-direction: column;
-        max-width: 400px;
+        height: 100%;
+        min-height: 100%;
         &--img {
             max-width: 100%; 
             width: 100%;
@@ -46,8 +47,6 @@
             flex-wrap: wrap;
             gap: 6px;
             margin-bottom: 20px;
-    
-     
         }
         &--note {
             display: flex;
@@ -69,7 +68,6 @@
         "value details";
         column-gap: 30px;
         margin-top: auto;
-        
         &__text {
                 @include section-text;
                 margin: 0;

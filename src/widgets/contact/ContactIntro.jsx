@@ -323,6 +323,7 @@ function ContactIntro (){
             type="email"
             className="card__link"
             target="_blank"
+            rel="noopener noreferrer"
           >
             Main Headquarters
           </a>
@@ -431,6 +432,7 @@ function ContactIntro (){
           <a
             href="https://www.instagram.com/"
             target="_blank"
+            rel="noopener noreferrer"
             className="card__link"
           >
             Instagram
@@ -438,11 +440,12 @@ function ContactIntro (){
           <a
             href="https://www.linkedin.com/"
             target="_blank"
+            rel="noopener noreferrer"
             className="card__link"
           >
             LinkedIn
           </a>
-          <a href="http://facebook.com/" target="_blank" className="card__link">
+          <a href="http://facebook.com/" target="_blank" rel="noopener noreferrer" className="card__link">
             Facebook
           </a>
         </p>

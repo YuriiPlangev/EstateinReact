@@ -1,7 +1,8 @@
-import Slider from "react-slick";
+import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { FreeMode, Autoplay } from 'swiper/modules';
 
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import 'swiper/css';
 
 import { properties } from "../../entities/propertiesList/properties";
 
@@ -9,38 +10,37 @@ import { properties } from "../../entities/propertiesList/properties";
 // import required modules
 
 function FeaturedSlider() {
-    var settings = {
-            infinity : true,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows : false,
-            mobileFirst : true,
-            responsive: [
-                {
-                breakpoint : 768,
-                settings : {
-                    slidesToShow: 2,
-                    
-                }
-                },
-                {
-                breakpoint :1024,
-                settings : {
-                    slidesToShow: 3,
-                    
-                }
-                },
-            ]
-      };
+
     return (
         <div className="slider-container">
-        <Slider {...settings}>
+            <Swiper
+                
+                autoplay={{
+                    delay: 2500,
+                    disableOnInteraction: false,
+                }}
+                loop={true}
+                modules={[FreeMode, Autoplay]}
+                breakpoints={{
+                    320: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    },
+                    768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    },
+                    1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                    },
+                }}
+>
+            
         {
             properties.map((property) => (
-              
-                    <article className="featured__card" id={`property-${property.id}`}>
+              <SwiperSlide>
+                    <article key={property.id} className="featured__card" id={`property-${property.id}`}>
                         <img src={`${property.images[0]}`} alt={property.name} className="featured__card--img" />
                         <h3 className="featured__card--title">{property.name}</h3>
                         <p className="featured__card--desc">
@@ -55,7 +55,7 @@ function FeaturedSlider() {
                             <div className="featured__card--note">
                                 <span>
                                     <svg width={20} height={20}>
-                                        <use xlinkHref="i/svg/spriteFeatured.svg#bed" />
+                                        <use xlinkHref="/svg/spriteFeatured.svg#bed" />
                                     </svg>
                                 </span>
                                 {property.bedrooms} Bedroom
@@ -63,7 +63,7 @@ function FeaturedSlider() {
                             <div className="featured__card--note">
                                 <span>
                                     <svg width={20} height={20}>
-                                        <use xlinkHref="i/svg/spriteFeatured.svg#bath" />
+                                        <use xlinkHref="/svg/spriteFeatured.svg#bath" />
                                     </svg>
                                 </span>
                                 {property.bathrooms} Bathroom
@@ -71,7 +71,7 @@ function FeaturedSlider() {
                             <div className="featured__card--note">
                                 <span>
                                     <svg width={20} height={20}>
-                                        <use xlinkHref="i/svg/spriteFeatured.svg#house" />
+                                        <use xlinkHref="/svg/spriteFeatured.svg#house" />
                                     </svg>
                                 </span>
                                 {property.type === "apartaments" ? "App" : "House"}
@@ -80,16 +80,20 @@ function FeaturedSlider() {
                         <div className="price">
                             <p className="price__text">Price</p>
                             <p className="price__value">
-                                {property.price} $
+                                ${property.price}
                             </p>
-                            <a href={`prop.html?id=${property.id}`} className="price__details">
+                            <Link  
+                            to={`/details/${property.name}`} 
+                            state = {{property}}
+                            className="price__details">
                                 View Property Details
-                            </a>
+                            </Link>
                         </div>
                     </article>
+              </SwiperSlide>
             ))
         }
-        </Slider>
+        </Swiper>
         </div>
     )
 }    

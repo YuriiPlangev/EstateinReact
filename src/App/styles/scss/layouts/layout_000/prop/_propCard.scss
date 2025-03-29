@@ -101,6 +101,9 @@
         padding: 20px;
     }
     &__features{
+        margin-bottom: 20px;
+        @include border(10px);
+        padding: 20px;
         &-list{
             display: flex;
             flex-direction: column;

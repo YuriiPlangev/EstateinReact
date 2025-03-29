@@ -15,7 +15,7 @@ function About() {
         <AboutNavigating />
         <AboutTeam />
         <AboutClients />
-        </main>
+    </main>
         <Info />
         
     </>

@@ -1,158 +1,22 @@
+const values = [
+  { title: "Trust", description: "Trust is the cornerstone of every successful real estate transaction.", icon: "/svg/star.svg" },
+  { title: "Excellence", description: "We set the bar high for ourselves. From the properties we list to the services we provide.", icon: "/svg/education.svg" },
+  { title: "Client-Centric", description: "Your dreams and needs are at the center of our universe. We listen, understand.", icon: "/svg/people.svg" },
+  { title: "Our Commitment", description: "We are dedicated to providing you with the highest level of service and professionalism.", icon: "/svg/star.svg" },
+];
+
 function AboutCards() {
-    return (
-        <div className="values__cards">
-        <article className="values__card">
-          <svg
-            width={52}
-            height={52}
-            viewBox="0 0 52 52"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width={51} height={51} rx="25.5" fill="#141414" />
-            <rect
-              x="0.5"
-              y="0.5"
-              width={51}
-              height={51}
-              rx="25.5"
-              stroke="#703BF7"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M24.7874 17.2107C25.2357 16.1327 26.7627 16.1327 27.2111 17.2107L29.2931 22.2164L34.6972 22.6496C35.8609 22.7429 36.3328 24.1952 35.4461 24.9547L31.3288 28.4817L32.5867 33.7552C32.8576 34.8908 31.6222 35.7883 30.6259 35.1798L25.9992 32.3538L21.3726 35.1798C20.3762 35.7883 19.1408 34.8908 19.4117 33.7552L20.6696 28.4817L16.5523 24.9547C15.6657 24.1952 16.1375 22.7429 17.3013 22.6496L22.7054 22.2164L24.7874 17.2107Z"
-              fill="#A685FA"
-            />
-          </svg>
-          <h3 className="values__card-title">Trust</h3>
-          <p className="values__card-description">
-            Trust is the cornerstone of every successful real estate transaction.
-          </p>
+  return (
+    <div className="values__cards">
+      {values.map((value, index) => (
+        <article  key={index} className="values__card">
+          <img className="values__card-img" src={value.icon} alt={value.title} />
+          <h3 className="values__card-title">{value.title}</h3>
+          <p className="values__card-description">{value.description}</p>
         </article>
-        <article className="values__card">
-          <svg
-            width={52}
-            height={52}
-            viewBox="0 0 52 52"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width={51} height={51} rx="25.5" fill="#141414" />
-            <rect
-              x="0.5"
-              y="0.5"
-              width={51}
-              height={51}
-              rx="25.5"
-              stroke="#703BF7"
-            />
-            <path
-              d="M25.7003 16.8053C25.8917 16.7216 26.1094 16.7216 26.3008 16.8053C30.0197 18.4301 33.5442 20.4164 36.83 22.7196C37.0678 22.8862 37.188 23.1752 37.1386 23.4614C37.0892 23.7475 36.879 23.9794 36.5991 24.0567C35.9142 24.2457 35.2352 24.4494 34.5623 24.6663C31.8312 25.5471 29.2023 26.6554 26.6976 27.9688L26.6944 27.9705C26.5808 28.0301 26.4675 28.09 26.3545 28.1504C26.1336 28.2684 25.8684 28.2684 25.6476 28.1504C25.5334 28.0895 25.4191 28.0289 25.3044 27.9688C24.0659 27.3193 22.7971 26.7201 21.5005 26.1736V25.95C21.5005 25.8186 21.5679 25.702 21.6722 25.6389C23.1773 24.727 24.7299 23.8856 26.3252 23.1194C26.6986 22.94 26.8559 22.492 26.6765 22.1186C26.4972 21.7452 26.0491 21.5879 25.6758 21.7672C24.0365 22.5546 22.4413 23.4191 20.895 24.3559C20.4416 24.6306 20.1368 25.0801 20.0366 25.5838C19.1816 25.2549 18.3155 24.9486 17.4388 24.6659C16.766 24.4489 16.0869 24.2457 15.402 24.0567C15.1221 23.9794 14.9119 23.7475 14.8625 23.4613C14.8131 23.1752 14.9333 22.8862 15.1711 22.7195C18.4569 20.4164 21.9815 18.4301 25.7003 16.8053Z"
-              fill="#A685FA"
-            />
-            <path
-              d="M27.0614 29.4734C29.5002 28.1703 32.0626 27.0687 34.7263 26.1906C34.8605 27.6054 34.9462 29.0343 34.9818 30.4755C34.9894 30.7847 34.8064 31.0669 34.5209 31.1861C31.6698 32.3764 28.9579 33.834 26.4164 35.5277C26.1646 35.6955 25.8365 35.6955 25.5846 35.5277C23.0432 33.834 20.3312 32.3764 17.4801 31.1861C17.1946 31.0669 17.0116 30.7847 17.0193 30.4755C17.0548 29.0342 17.1405 27.6052 17.2748 26.1903C18.1958 26.4938 19.1046 26.8242 20.0005 27.1803V28.4507C19.5521 28.71 19.2505 29.1948 19.2505 29.75C19.2505 30.2453 19.4906 30.6846 19.8607 30.9577C19.7712 31.3383 19.6387 31.7108 19.4633 32.0675C19.916 32.2811 20.3648 32.5017 20.8096 32.7289C21.0629 32.2137 21.2466 31.6729 21.3606 31.1207C21.885 30.887 22.2505 30.3612 22.2505 29.75C22.2505 29.1948 21.9488 28.71 21.5005 28.4507V27.8059C22.6719 28.3177 23.8193 28.8743 24.9407 29.4734C25.6032 29.8274 26.3988 29.8274 27.0614 29.4734Z"
-              fill="#A685FA"
-            />
-            <path
-              d="M18.4627 33.4623C18.8818 33.0432 19.2155 32.5711 19.4633 32.0675C19.916 32.2811 20.3648 32.5017 20.8096 32.7289C20.491 33.3768 20.0621 33.9842 19.5234 34.523C19.2305 34.8158 18.7556 34.8158 18.4627 34.523C18.1698 34.2301 18.1698 33.7552 18.4627 33.4623Z"
-              fill="#A685FA"
-            />
-          </svg>
-          <h3 className="values__card-title">Excellence</h3>
-          <p className="values__card-description">
-            We set the bar high for ourselves. From the properties we list to the
-            services we provide.{" "}
-          </p>
-        </article>
-        <article className="values__card">
-          <svg
-            width={52}
-            height={52}
-            viewBox="0 0 52 52"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width={51} height={51} rx="25.5" fill="#141414" />
-            <rect
-              x="0.5"
-              y="0.5"
-              width={51}
-              height={51}
-              rx="25.5"
-              stroke="#703BF7"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M22.25 20.75C22.25 18.6789 23.9289 17 26 17C28.0711 17 29.75 18.6789 29.75 20.75C29.75 22.8211 28.0711 24.5 26 24.5C23.9289 24.5 22.25 22.8211 22.25 20.75Z"
-              fill="#A685FA"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M29.75 23.75C29.75 22.0931 31.0931 20.75 32.75 20.75C34.4069 20.75 35.75 22.0931 35.75 23.75C35.75 25.4069 34.4069 26.75 32.75 26.75C31.0931 26.75 29.75 25.4069 29.75 23.75Z"
-              fill="#A685FA"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M16.25 23.75C16.25 22.0931 17.5931 20.75 19.25 20.75C20.9069 20.75 22.25 22.0931 22.25 23.75C22.25 25.4069 20.9069 26.75 19.25 26.75C17.5931 26.75 16.25 25.4069 16.25 23.75Z"
-              fill="#A685FA"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M20.3099 29.1175C21.5078 27.2444 23.6083 26 26 26C28.3919 26 30.4927 27.2447 31.6906 29.1182C32.5187 30.4134 32.877 31.9752 32.709 33.4979C32.6827 33.7359 32.5444 33.947 32.3368 34.0662C30.4694 35.1376 28.3051 35.75 26 35.75C23.6949 35.75 21.5306 35.1376 19.6632 34.0662C19.4556 33.947 19.3173 33.7359 19.291 33.4979C19.1229 31.9749 19.4814 30.4129 20.3099 29.1175Z"
-              fill="#A685FA"
-            />
-            <path
-              d="M19.0823 28.2537C19.0702 28.2722 19.0583 28.2907 19.0464 28.3093C18.0809 29.8189 17.6391 31.6167 17.7747 33.389C17.1667 33.2967 16.5767 33.1481 16.0104 32.9487L15.8955 32.9082C15.6858 32.8343 15.5392 32.6439 15.5216 32.4222L15.5119 32.3007C15.504 32.2014 15.5 32.1011 15.5 32C15.5 29.9851 17.089 28.3414 19.0823 28.2537Z"
-              fill="#A685FA"
-            />
-            <path
-              d="M34.2256 33.389C34.3612 31.617 33.9196 29.8196 32.9545 28.3102C32.9424 28.2913 32.9303 28.2725 32.9181 28.2537C34.9111 28.3416 36.5 29.9853 36.5 32C36.5 32.1011 36.496 32.2014 36.4881 32.3007L36.4784 32.4222C36.4608 32.6439 36.3142 32.8343 36.1045 32.9082L35.9896 32.9487C35.4234 33.1481 34.8336 33.2966 34.2256 33.389Z"
-              fill="#A685FA"
-            />
-          </svg>
-          <h3 className="values__card-title">Client-Centric</h3>
-          <p className="values__card-description">
-            Your dreams and needs are at the center of our universe. We listen,
-            understand.{" "}
-          </p>
-        </article>
-        <article className="values__card">
-          <svg
-            width={52}
-            height={52}
-            viewBox="0 0 52 52"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect x="0.5" y="0.5" width={51} height={51} rx="25.5" fill="#141414" />
-            <rect
-              x="0.5"
-              y="0.5"
-              width={51}
-              height={51}
-              rx="25.5"
-              stroke="#703BF7"
-            />
-            <path
-              fillRule="evenodd"
-              clipRule="evenodd"
-              d="M24.7874 17.2107C25.2357 16.1327 26.7627 16.1327 27.2111 17.2107L29.2931 22.2164L34.6972 22.6496C35.8609 22.7429 36.3328 24.1952 35.4461 24.9547L31.3288 28.4817L32.5867 33.7552C32.8576 34.8908 31.6222 35.7883 30.6259 35.1798L25.9992 32.3538L21.3726 35.1798C20.3762 35.7883 19.1408 34.8908 19.4117 33.7552L20.6696 28.4817L16.5523 24.9547C15.6657 24.1952 16.1375 22.7429 17.3013 22.6496L22.7054 22.2164L24.7874 17.2107Z"
-              fill="#A685FA"
-            />
-          </svg>
-          <h3 className="values__card-title">Our Commitment</h3>
-          <p className="values__card-description">
-            We are dedicated to providing you with the highest level of service,
-            professionalism{" "}
-          </p>
-        </article>
-      </div>
-    );  
+      ))}
+    </div>
+  );
 }
-export default AboutCards
+
+export default AboutCards;

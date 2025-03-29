@@ -1,13 +1,14 @@
-
+import { Link } from "react-router-dom"
 function IntroLinkButtons() {
     return (
         <div className="intro__button">
-        <a href="properties.html" className="button__browse">
-        Browse Properties
-        </a>
-        <a href="contactUs.html" className="button__learn">
+        
+        <Link to="/properties" className="button__browse">
+        View Properties
+        </Link>
+        <Link to="/contact" className="button__learn">
         Learn More
-        </a>
+        </Link>
         </div>
     )
     
