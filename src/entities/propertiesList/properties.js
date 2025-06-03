@@ -18,12 +18,12 @@ export const properties = [
     ],
     images :
     [
-        "/images/prop/1.png",
-        "/images/prop/2.png",
-        "/images/prop/3.png",
-        "/images/prop/4.png",
-        "/images/prop/5.png",
-        "/images/prop/6.png",
+        "images/prop/1.png",
+        "images/prop/2.png",
+        "images/prop/3.png",
+        "images/prop/4.png",
+        "images/prop/5.png",
+        "images/prop/6.png",
     ],
     description: "Elegant 3-bedroom, 228 m² home in Miami’s top district, 800 m from the sea. Features panoramic windows, balcony, and premium amenities like a playroom, barbecue area, and 24/7 security.",
 },
@@ -44,11 +44,11 @@ export const properties = [
     ],
     images :
     [
-        "/images/prop/2.1.png",
-        "/images/prop/2.2.png",
-        "/images/prop/2.3.png",
-        "/images/prop/2.4.png",
-        "/images/prop/2.5.png",
+        "images/prop/2.1.png",
+        "images/prop/2.2.png",
+        "images/prop/2.3.png",
+        "images/prop/2.4.png",
+        "images/prop/2.5.png",
     ],
     description: "Stylish Oasis in Downtown Miami is located in Miami, just a 13-minute walk from Bayfront Park Station and 1.1 miles from Port of Miami. Free Wifi is offered throughout the property and private parking is available on site. The property is 700 yards from the city center and a 6-minute walk from American Airlines Arena.",
     
@@ -71,11 +71,11 @@ export const properties = [
     ],
     images :
     [
-        "/images/prop/3.1.png",
-        "/images/prop/3.2.png",
-        "/images/prop/3.3.png",
-        "/images/prop/3.4.png",
-        "/images/prop/3.5.png",
+        "images/prop/3.1.png",
+        "images/prop/3.2.png",
+        "images/prop/3.3.png",
+        "images/prop/3.4.png",
+        "images/prop/3.5.png",
     ],
     description: "The villa with a patio and mountain views has 4 bedrooms, a living room, a flat-screen TV, an equipped kitchen with a dishwasher and an oven, and 2 bathrooms with a walk-in shower. Featuring air conditioning, the villa lets you make use of Xbox One, game console and Blu-ray player. ",
     
@@ -97,11 +97,11 @@ export const properties = [
     ],
     images :
     [
-        "/images/prop/4.1.webp",
-        "/images/prop/4.2.webp",
-        "/images/prop/4.3.webp",
-        "/images/prop/4.4.webp",
-        "/images/prop/4.5.webp",
+        "images/prop/4.1.webp",
+        "images/prop/4.2.webp",
+        "images/prop/4.3.webp",
+        "images/prop/4.4.webp",
+        "images/prop/4.5.webp",
     ],
     description: "Stay in the heart of Downtown LA at The Craftsman. The lobby features an original tile masterpiece by local artist Ernest Batchelder.The Orpheum Theatre is around the corner for the best of live entertainment. Watch for celebrities at the Lakers game or taste the Bee’s Knees cocktail at Spring St. Bar. Whatever your adventure, it all starts at The Craftsman.",
     
@@ -124,11 +124,11 @@ export const properties = [
     ],
     images :
     [
-        "/images/prop/5.1.png",
-        "/images/prop/5.2.png",
-        "/images/prop/5.3.png",
-        "/images/prop/5.4.png",
-        "/images/prop/5.5.png",
+        "images/prop/5.1.png",
+        "images/prop/5.2.png",
+        "images/prop/5.3.png",
+        "images/prop/5.4.png",
+        "images/prop/5.5.png",
     ],
     description: "Cosy Luxury villa Tilal Alghaf is located in Dubai, just 4.1 miles from Dubai Autodrome and 8.6 miles from Mall of the Emirates. This property offers access to a terrace and free private parking. The vacation home offers an outdoor swimming pool with a fence, as well as a fitness room and full-day security.",
     
@@ -149,11 +149,11 @@ export const properties = [
         "Immerse yourself in the tranquility of a beautifully landscaped garden.",    ],
     images :
     [
-        "/images/prop/6.1.webp",
-        "/images/prop/6.2.webp",
-        "/images/prop/6.3.webp",
-        "/images/prop/6.4.webp",
-        "/images/prop/6.5.webp",
+        "images/prop/6.1.webp",
+        "images/prop/6.2.webp",
+        "images/prop/6.3.webp",
+        "images/prop/6.4.webp",
+        "images/prop/6.5.webp",
     ],
     description: "This development combines elegant design and premium materials to create a refined living experience, featuring modern indoor finishes, luxurious bathrooms, and sophisticated kitchens. With exclusive amenities like a rooftop infinity pool, outdoor cinema, VR golf, and smart home technology, it offers unparalleled comfort and convenience.",
     

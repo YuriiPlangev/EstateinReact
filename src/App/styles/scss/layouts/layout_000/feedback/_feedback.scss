@@ -77,30 +77,18 @@
     }
 }
 .swiper-slide {
-    height: auto;
+    display: flex;
+    height: 100%;
 }
 .slider__item {
     height: 100%;
 }
-.slick-list {
-    display: flex;
-    align-items: stretch;  /* Растягивает слайды по высоте */
-  }
   
-  .slick-track {
-    display: flex;
-    align-items: stretch;  /* Растягивает слайды по высоте */
-  }
-  
-  /* Переопределяем стандартные стили slick */
-  .slick-slide {
-    display: flex !important;
-    height: 100% !important;  /* Фиксированная высота для каждого слайда */
-  }
-  
-  /* Если используешь дополнительный класс для элемента слайда */
   .slider__item {
     display: flex;
     align-items: stretch;
+  }
+  .slider-container {
+     height: auto;
   }
 
